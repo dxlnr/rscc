@@ -6,3 +6,9 @@ pub struct Cli {
     #[clap(parse(from_os_str))]
     pub path: std::path::PathBuf,
 }
+
+#[derive(Debug)]
+pub struct FileError {
+    // pub problem: SourceError<'a, T>,
+    pub path: std::path::PathBuf,
+}
